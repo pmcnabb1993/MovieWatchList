@@ -22,7 +22,7 @@ class Movies extends Component {
   loadMovies = () => {
     API.getMovies()
       .then(res =>
-        this.setState({ movie: res.data, title: "", director: "", synopsis: "" })
+        this.setState({ movies: res.data, title: "", director: "", synopsis: "" })
       )
       .catch(err => console.log(err));
   };
