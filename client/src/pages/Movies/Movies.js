@@ -8,50 +8,51 @@ import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 
 class Movies extends Component {
-	state = {
-		movies: [],
-		title: "",
-		director: "",
-		synopsis: ""
-	};
+  state = {
+    movies: [],
+    title: "",
+    director: "",
+    synopsis: ""
+  };
 
-	componentDidMount() {
-		this.loadMovies();
-	}
+  componentDidMount() {
+    this.loadMovies();
+  }
 
-	loadMovies = () => {
-		API.getMovies()
-		.then(res =>
-			this.setState({ movies: res.data, title: "", director: "", synopsis: ""})
-			)
-		.catch(err => console.log(err));
-	};
+  loadMovies = () => {
+    API.getMovies()
+      .then(res =>
+        this.setState({ movie: res.data, title: "", director: "", synopsis: "" })
+      )
+      .catch(err => console.log(err));
+  };
 
-	deleteMovie = id => {
-		API.deleteMovie(id)
-		.then(res => this.loadMovies())
-		.catch(err => console.log(err));
-	};
+  deleteMovie = id => {
+    API.deleteMovie(id)
+      .then(res => this.loadMovies())
+      .catch(err => console.log(err));
+  };
 
-	handleInputChange = event => {
-		const { name, value } = event.target;
-		this.setState({
-			[name]: value
-		});
-	};
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
 
-	handleFormSubmit = event => {
-		event.preventDefault();
-		if (this.state.title && this.state.director) {
-			API.saveMovie({
-				title: this.state.title,
-				director: this.state.director,
-				synopsis: this.state.synopsis
-			})
-			.then(res => this.loadMovies())
-			.catch(err => console.log(err));
-		}
-	};
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.title && this.state.director) {
+      API.saveMovie({
+        title: this.state.title,
+        director: this.state.director,
+        synopsis: this.state.synopsis
+      })
+        .then(res => this.loadMovies())
+        .catch(err => console.log(err));
+    }
+  };
+
 
 	render() {
     return (
