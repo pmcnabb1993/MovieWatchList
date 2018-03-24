@@ -15,6 +15,6 @@ export default {
 	},
 	//Saves new movie
 	saveMovie: function(movieData) {
-		return axios.post("/api/movies", moiveData);
+		return axios.post("/api/movies", movieData);
 	}
 };
