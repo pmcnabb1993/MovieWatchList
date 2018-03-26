@@ -1,0 +1,8 @@
+.jumbotron {
+    background-color: #d9edf7;
+}
+.jumbotron h1 {
+    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+    opacity: 0.85;
+    text-align: center;
+}

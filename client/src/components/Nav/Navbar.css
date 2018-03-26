@@ -1,0 +1,24 @@
+.form-inline {
+  float:right;
+  margin-top: 10px;
+  display: inline;
+}
+
+a {
+  color: #007bff;
+  font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+}
+
+a:hover, a:focus {
+    color: #1f38c7;
+}
+
+
+#button1 {
+  background-color: #007bff;
+  border-color: #007bff;
+  opacity: 0.65;
+  
+}
+
+

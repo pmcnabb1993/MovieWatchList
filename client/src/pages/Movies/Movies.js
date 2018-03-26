@@ -60,7 +60,7 @@ class Movies extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Movies Should I Watch?</h1>
+              <h1>Add Movie To Watch List</h1>
             </Jumbotron>
             <form>
               <Input
@@ -91,7 +91,7 @@ class Movies extends Component {
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Movies on my Watch List</h1>
+              <h1>My Movie Watch List</h1>
             </Jumbotron>
             {this.state.movies.length ? (
               <List>

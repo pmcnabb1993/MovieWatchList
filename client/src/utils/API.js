@@ -11,10 +11,10 @@ export default {
 	},
 	//Delete movie
 	deleteMovie: function(id) {
-		return axios.delete("/api/movies" + id);
+		return axios.delete("/api/movies/" + id);
 	},
 	//Saves new movie
 	saveMovie: function(movieData) {
-		return axios.post("/api/movies", movieData);
+		return axios.post("/api/movies/", movieData);
 	}
 };
