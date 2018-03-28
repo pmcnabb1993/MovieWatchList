@@ -14,9 +14,8 @@ app.use(express.static("client/build"));
 // Add routes, both API and view
 app.use(routes);
 
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-})
+app.use(express.static(__dirname))
+app.get('*', (req, res) => res.sendFile(path.join(__dirname, '/index.html')))
 
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;
