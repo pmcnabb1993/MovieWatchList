@@ -1,7 +1,7 @@
 {
   "name": "mern",
   "version": "1.0.0",
-  "description": "",
+  "homepage": "https://pmcnabb1993.github.io/MovieWatchList/",
   "main": "server.js",
   "scripts": {
     "server": "node server.js",
