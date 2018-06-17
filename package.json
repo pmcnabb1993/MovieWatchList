@@ -1,7 +1,7 @@
 {
   "name": "mern",
   "version": "1.0.0",
-  "homepage": "https://pmcnabb1993.github.io/MovieWatchList/",
+  "homepage": "https://pmcnabb1993.github.io/MovieWatchList",
   "main": "server.js",
   "engines": {
     "npm": "5.7.1",
@@ -22,6 +22,7 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^3.5.0",
+    "gh-pages": "^1.2.0",
     "nodemon": "^1.11.0"
   },
   "dependencies": {
